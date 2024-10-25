@@ -1,0 +1,12 @@
+digraph "CFG for 'store' function" {
+	label="CFG for 'store' function";
+
+	Node0x107b8e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{label_entry:\l  %op3 = alloca i32*, align 8\l  store i32* %arg0, i32** %op3, align 8\l  %op4 = alloca i32, align 4\l  store i32 %arg1, i32* %op4, align 4\l  %op5 = alloca i32, align 4\l  store i32 %arg2, i32* %op5, align 4\l  %op6 = load i32, i32* %op4, align 4\l  %op7 = icmp sge i32 %op6, 0\l  br i1 %op7, label %label_etrueBB, label %label_eefalseBB\l|{<s0>T|<s1>F}}"];
+	Node0x107b8e0:s0 -> Node0x107c380;
+	Node0x107b8e0:s1 -> Node0x107c400;
+	Node0x107c380 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f59c7d70",label="{label_etrueBB:                                    \l  br label %label_eeeretBB\l}"];
+	Node0x107c380 -> Node0x107c590;
+	Node0x107c400 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f59c7d70",label="{label_eefalseBB:                                  \l  call void @neg_idx_except()\l  br label %label_eeeretBB\l}"];
+	Node0x107c400 -> Node0x107c590;
+	Node0x107c590 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{label_eeeretBB:                                   \l  %op8 = load i32*, i32** %op3, align 8\l  %op9 = getelementptr i32, i32* %op8, i32 %op6\l  %op10 = load i32, i32* %op5, align 4\l  store i32 %op10, i32* %op9, align 4\l  %op11 = load i32, i32* %op5, align 4\l  ret i32 %op11\l}"];
+}

@@ -1,0 +1,10 @@
+digraph "CFG for 'min' function" {
+	label="CFG for 'min' function";
+
+	Node0x8e6fe0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{label_entry:\l  %op2 = alloca i32, align 4\l  store i32 %arg0, i32* %op2, align 4\l  %op3 = alloca i32, align 4\l  store i32 %arg1, i32* %op3, align 4\l  %op4 = load i32, i32* %op2, align 4\l  %op5 = load i32, i32* %op3, align 4\l  %op6 = icmp sle i32 %op4, %op5\l  %op7 = zext i1 %op6 to i32\l  %op8 = icmp eq i32 %op7, 0\l  br i1 %op8, label %label_eefalseBB, label %label_etrueBB\l|{<s0>T|<s1>F}}"];
+	Node0x8e6fe0:s0 -> Node0x8e7b40;
+	Node0x8e6fe0:s1 -> Node0x8e7bc0;
+	Node0x8e7bc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#e8765c70",label="{label_etrueBB:                                    \l  %op9 = load i32, i32* %op2, align 4\l  ret i32 %op9\l}"];
+	Node0x8e7b40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f7b39670",label="{label_eefalseBB:                                  \l  %op10 = load i32, i32* %op3, align 4\l  ret i32 %op10\l}"];
+	Node0x8e8120 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#3d50c370",label="{label_eeeretBB:                                   \l  ret i32 0\l}"];
+}

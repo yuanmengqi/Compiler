@@ -1,0 +1,9 @@
+digraph "CFG for 'randBin' function" {
+	label="CFG for 'randBin' function";
+
+	Node0x17b43a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{label_entry:\l  %op0 = call i32 @randomLCG()\l  %op1 = icmp sgt i32 %op0, 0\l  %op2 = zext i1 %op1 to i32\l  %op3 = icmp eq i32 %op2, 0\l  br i1 %op3, label %label_eefalseBB, label %label_etrueBB\l|{<s0>T|<s1>F}}"];
+	Node0x17b43a0:s0 -> Node0x17b47e0;
+	Node0x17b43a0:s1 -> Node0x17b4860;
+	Node0x17b4860 [shape=record,color="#b70d28ff", style=filled, fillcolor="#e8765c70",label="{label_etrueBB:                                    \l  ret i32 1\l}"];
+	Node0x17b47e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f7b39670",label="{label_eefalseBB:                                  \l  ret i32 0\l}"];
+}

@@ -1,0 +1,8 @@
+/home/yuanmengqi/2023ustc-jianmu-compiler/tests/3-codegen/warmup/ll_cases/CMakeFiles/stu_assign_codegen.dir
+/home/yuanmengqi/2023ustc-jianmu-compiler/tests/3-codegen/warmup/ll_cases/CMakeFiles/stu_function_codegen.dir
+/home/yuanmengqi/2023ustc-jianmu-compiler/tests/3-codegen/warmup/ll_cases/CMakeFiles/stu_icmp_codegen.dir
+/home/yuanmengqi/2023ustc-jianmu-compiler/tests/3-codegen/warmup/ll_cases/CMakeFiles/stu_fcmp_codegen.dir
+/home/yuanmengqi/2023ustc-jianmu-compiler/tests/3-codegen/warmup/ll_cases/CMakeFiles/stu_float_codegen.dir
+/home/yuanmengqi/2023ustc-jianmu-compiler/tests/3-codegen/warmup/ll_cases/CMakeFiles/stu_global_codegen.dir
+/home/yuanmengqi/2023ustc-jianmu-compiler/tests/3-codegen/warmup/ll_cases/CMakeFiles/edit_cache.dir
+/home/yuanmengqi/2023ustc-jianmu-compiler/tests/3-codegen/warmup/ll_cases/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/stu_fcmp_codegen.dir/stu_cpp/fcmp_codegen.cpp.o -o stu_fcmp_codegen  -lIR_lib -lcodegen 

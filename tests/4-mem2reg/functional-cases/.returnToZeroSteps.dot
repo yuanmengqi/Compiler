@@ -1,0 +1,23 @@
+digraph "CFG for 'returnToZeroSteps' function" {
+	label="CFG for 'returnToZeroSteps' function";
+
+	Node0x17b4c90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dbdcde70",label="{label_entry:\l  %op0 = alloca i32, align 4\l  %op1 = alloca i32, align 4\l  store i32 0, i32* %op0, align 4\l  store i32 0, i32* %op1, align 4\l  br label %label_eeewhileBB\l}"];
+	Node0x17b4c90 -> Node0x17b5010;
+	Node0x17b5010 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{label_eeewhileBB:                                 \l  %op2 = load i32, i32* %op1, align 4\l  %op3 = icmp slt i32 %op2, 20\l  %op4 = zext i1 %op3 to i32\l  %op5 = icmp sgt i32 %op4, 0\l  br i1 %op5, label %label_eeeetrueBB, label %label_eeeeefalseBB\l|{<s0>T|<s1>F}}"];
+	Node0x17b5010:s0 -> Node0x17b53e0;
+	Node0x17b5010:s1 -> Node0x17b5480;
+	Node0x17b53e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{label_eeeetrueBB:                                 \l  %op6 = call i32 @randBin()\l  %op7 = icmp eq i32 %op6, 0\l  br i1 %op7, label %label_eeeeeeefalseBB, label %label_eeeeeetrueBB\l|{<s0>T|<s1>F}}"];
+	Node0x17b53e0:s0 -> Node0x17b5750;
+	Node0x17b53e0:s1 -> Node0x17b5990;
+	Node0x17b5480 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{label_eeeeefalseBB:                               \l  ret i32 20\l}"];
+	Node0x17b5990 [shape=record,color="#b70d28ff", style=filled, fillcolor="#d6524470",label="{label_eeeeeetrueBB:                               \l  %op8 = load i32, i32* %op0, align 4\l  %op9 = add i32 %op8, 1\l  store i32 %op9, i32* %op0, align 4\l  br label %label_eeeeeeeeretBB\l}"];
+	Node0x17b5990 -> Node0x17b5d40;
+	Node0x17b5750 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370",label="{label_eeeeeeefalseBB:                             \l  %op10 = load i32, i32* %op0, align 4\l  %op11 = sub i32 %op10, 1\l  store i32 %op11, i32* %op0, align 4\l  br label %label_eeeeeeeeretBB\l}"];
+	Node0x17b5750 -> Node0x17b5d40;
+	Node0x17b5d40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{label_eeeeeeeeretBB:                              \l  %op12 = load i32, i32* %op1, align 4\l  %op13 = add i32 %op12, 1\l  store i32 %op13, i32* %op1, align 4\l  %op14 = load i32, i32* %op0, align 4\l  %op15 = icmp eq i32 %op14, 0\l  %op16 = zext i1 %op15 to i32\l  %op17 = icmp eq i32 %op16, 0\l  br i1 %op17, label %label_eeeeeeeeeeretBB, label %label_eeeeeeeeetrueBB\l|{<s0>T|<s1>F}}"];
+	Node0x17b5d40:s0 -> Node0x17b67f0;
+	Node0x17b5d40:s1 -> Node0x17b6860;
+	Node0x17b6860 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{label_eeeeeeeeetrueBB:                            \l  %op18 = load i32, i32* %op1, align 4\l  ret i32 %op18\l}"];
+	Node0x17b67f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{label_eeeeeeeeeeretBB:                            \l  br label %label_eeewhileBB\l}"];
+	Node0x17b67f0 -> Node0x17b5010;
+}

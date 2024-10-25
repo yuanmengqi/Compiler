@@ -1,0 +1,5 @@
+digraph "CFG for 'randomLCG' function" {
+	label="CFG for 'randomLCG' function";
+
+	Node0x17b3e10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{label_entry:\l  %op0 = load i32, i32* @seed, align 4\l  %op1 = mul i32 %op0, 1103515245\l  %op2 = add i32 %op1, 12345\l  store i32 %op2, i32* @seed, align 4\l  %op3 = load i32, i32* @seed, align 4\l  ret i32 %op3\l}"];
+}

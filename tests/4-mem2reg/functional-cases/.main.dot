@@ -1,0 +1,12 @@
+digraph "CFG for 'main' function" {
+	label="CFG for 'main' function";
+
+	Node0x17b7420 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{label_entry:\l  %op0 = alloca i32, align 4\l  store i32 0, i32* %op0, align 4\l  store i32 3407, i32* @seed, align 4\l  br label %label_eeeeeeeeeeewhileBB\l}"];
+	Node0x17b7420 -> Node0x17b7730;
+	Node0x17b7730 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{label_eeeeeeeeeeewhileBB:                         \l  %op1 = load i32, i32* %op0, align 4\l  %op2 = icmp slt i32 %op1, 20\l  %op3 = zext i1 %op2 to i32\l  %op4 = icmp sgt i32 %op3, 0\l  br i1 %op4, label %label_eeeeeeeeeeeetrueBB, label\l... %label_eeeeeeeeeeeeefalseBB\l|{<s0>T|<s1>F}}"];
+	Node0x17b7730:s0 -> Node0x17b7b10;
+	Node0x17b7730:s1 -> Node0x17b7ba0;
+	Node0x17b7b10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{label_eeeeeeeeeeeetrueBB:                         \l  %op5 = call i32 @returnToZeroSteps()\l  call void @output(i32 %op5)\l  %op6 = load i32, i32* %op0, align 4\l  %op7 = add i32 %op6, 1\l  store i32 %op7, i32* %op0, align 4\l  br label %label_eeeeeeeeeeewhileBB\l}"];
+	Node0x17b7b10 -> Node0x17b7730;
+	Node0x17b7ba0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{label_eeeeeeeeeeeeefalseBB:                       \l  ret i32 0\l}"];
+}
